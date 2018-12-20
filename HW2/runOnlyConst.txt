@@ -1,0 +1,37 @@
+#include <iostream>
+#include "clockType.h"
+
+using namespace std;
+using namespace myClock;
+
+int main() {
+
+	int hours1, minutes1, seconds1, hours2, minutes2, seconds2;
+	clockType thisClock;
+
+	cout << "Clock1 initialized without specifying time" << endl;
+
+	cout << "Function getTime is used" << endl;
+	thisClock.getTime(hours1, minutes1, seconds1);
+	cout << "Function printTime is used" << endl;
+	thisClock.printTime();
+	cout << endl;
+
+	cout << "Function incrementSeconds, incrementMinutes, incrementHours is used" << endl;
+	thisClock.incrementSeconds();
+	thisClock.incrementMinutes();
+	thisClock.incrementHours();
+	thisClock.printTime();
+	cout << endl;
+
+	hours2 = 1;
+	minutes2 = 1;
+	seconds2 = 1;
+
+	clockType thatClock(hours2, minutes2, seconds2);
+	cout << "Clock2 initialized with time - Hours: " << setfill('0') << setw(2) << hours2 << ", Minutes: " << setfill('0') << setw(2) << minutes2 << ", Seconds: " << setfill('0') << setw(2) << seconds2 << endl;
+	cout << "Function equalTime is used" << endl;
+	if(thisClock.equalTime(thatClock)) cout << "The clocks have equal time" << endl;
+	else cout << "The clocks have unequal time" << endl;
+
+}
