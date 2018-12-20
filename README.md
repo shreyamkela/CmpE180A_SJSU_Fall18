@@ -1,1 +1,1 @@
-CmpE 180A course taken under professor Juan Gomez, in the Fall 18 semester
+Class of professor Juan Gomez in the Fall 18 semester
